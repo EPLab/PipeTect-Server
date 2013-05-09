@@ -1,0 +1,134 @@
+<html>
+<head>
+<title>Duramote: Permanent UCI Campus Experiment</title>
+<style type="text/css">
+<!--
+.imageDiv {
+	position: absolute;
+	top: 0px;
+	left: 230px;
+	width: 1024px;
+}
+
+#div_ET {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+#div_EH {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+#div_AIRB {
+	position: absolute;
+	top: 10px;
+	left: 1135px;
+}
+
+#div_EG {
+	position: absolute;
+	top: 300px;
+	left: 1135px;
+}
+
+#div_CALIT2 {
+	position: absolute;
+	top: 300px;
+	left: 10px;
+}
+//-->
+</style>
+<script type="text/javascript" src="jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+<!--
+function reloadFrames(){
+//	$('#div_ET').fadeOut(100).hide();
+//	$('#frame_ET').attr('src', "http://duramote.eng.uci.edu/ET_static.html");
+//	$('#div_ET').fadeIn(100);
+
+	$('#div_EH').fadeOut(100).hide();
+	$('#frame_EH').attr('src', "http://duramote.eng.uci.edu/EH_static.html");
+	document.getElementById('frame_EH').contentWindow.location.reload();
+	$('#div_EH').fadeIn(100);
+	
+	$('#div_CALIT2').fadeOut(100).hide();
+	$('#frame_CALIT2').attr('src', "http://duramote.eng.uci.edu/CALIT2_static.html");
+	document.getElementById('frame_CALIT2').contentWindow.location.reload();
+	$('#div_CALIT2').fadeIn(100);
+
+	$('#div_EG').fadeOut(100).hide();
+	$('#frame_EG').attr('src', "http://duramote.eng.uci.edu/EG_static.html");
+	document.getElementById('frame_EG').contentWindow.location.reload();
+	$('#div_EG').fadeIn(100);
+
+	$('#div_AIRB').fadeOut(100).hide();
+	$('#frame_AIRB').attr('src', "http://duramote.eng.uci.edu/AIRB_static.html");
+	document.getElementById('frame_AIRB').contentWindow.location.reload();
+	$('#div_AIRB').fadeIn(100);
+	
+	setTimeout("reloadFrames()", 5000);
+	return;
+}
+//-->
+</script>
+</head>
+<body onload="reloadFrames()">
+
+<div class="imageDiv">
+	<center>
+	<h1>Duramote: Permanent UCI Campus Experiment</h1>
+	<img alt="Experiment Layout" longdesc="Experiment Layout: Engineering Hall, Engineering Gateway, AIRB, CALIT2" src="http://duramote.eng.uci.edu/c.jpg" height="403" width="787" usemap="#CampusMap"/>
+	<h3>NIST-TIP Project: New generation SCADA System</h3>
+	<h3>for detection of leakage and rupture in water pipes</h3>
+	<h3>- Sensor Frequency Range 0.1 Hz to 1 kHz</h3>
+	<h3>- Current sampling frequency 100Hz</h3>
+	<h3>- Current streaming refresh rate 5 sec</h3>
+
+	</center>
+</div>
+<!--
+<div id="div_ET">
+	<iframe id="frame_ET" src="ET_static.html" width=335px height=260px marginwidth=0 marginheight=0 vspace=0 hspace=0>
+		iFrame is not supported
+	</iframe>
+</div>
+--!>
+<div id="div_EH">
+	<iframe id="frame_EH" src="EH_static.html" width=335px height=260px marginwidth=0 marginheight=0 vspace=0 hspace=0>
+		iFrame is not supported
+	</iframe>
+</div>
+
+<div id="div_CALIT2">
+	<iframe id="frame_CALIT2" src="CALIT2_static.html" width=335px height=260px marginwidth=0 marginheight=0 vspace=0 hspace=0>
+		iFrame is not supported
+	</iframe>
+</div>
+
+<div id="div_EG">
+	<iframe id="frame_EG" src="EG_static.html" width=335px height=260px marginwidth=0 marginheight=0 vspace=0 hspace=0>
+		iFrame is not supported
+	</iframe>
+</div>
+
+<div id="div_AIRB">
+	<iframe id="frame_AIRB" src="AIRB_static.html" width=335px height=260px marginwidth=0 marginheight=0 vspace=0 hspace=0>
+		iFrame is not supported
+	</iframe>
+</div>
+<!--
+<map name="CampusMap">
+	<area shape="circ" coords="135,60,20" href="ET.html" alt="Engineering Tower" target="_blank" />
+	<area shape="circ" coords="58,210,20" href="EH4120.html" alt="Engineering Hall" target="_blank" />
+	<area shape="circ" coords="103,318,20" href="Calit2.html" alt="Calit2 Building" target="_blank" />
+	<area shape="circ" coords="290,270,20" href="EG.html" alt="Enginnering Gateway" target="_blank" />
+	<area shape="circ" coords="635,328,20" href="AIRB.html" alt="AIRB Building" target="_blank" />
+</map>
+//-->
+</center>
+
+</body>
+</html>

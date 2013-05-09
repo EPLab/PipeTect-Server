@@ -1,0 +1,250 @@
+<html>
+<head>
+<noscript>
+<meta http-Equiv="Cache-Control" Content="no-cache">
+<meta http-Equiv="Pragma" Content="no-cache">
+<meta http-Equiv="Expires" Content="0">
+</noscript>
+<title>OCSD Site Monitoring</title>
+<style type="text/css">
+<!--
+.imageDiv {
+	position: absolute;
+	top: 0px;
+	left: 230px;
+	background-color: white;
+	background-repeat: no-repeat;
+	width: 1024px;
+	height: 800px;
+	z-index: 0;
+}
+
+#pipe1 {
+	position: absolute;
+	top: 10px;
+	left: 650px;
+	width: 80px;
+	height: 80px;
+	background-repeat: no-repeat;
+	background-image: url(pipe.jpg);
+	background-size: 80px;
+	z-index: 1;
+}
+
+#pipe1_live {
+	position: absolute;
+	top: 5px;
+	left: 745px;
+	width: 100px;
+	height: 80px;
+	z-index: 1;
+}
+
+#pipe2 {
+	position: absolute;
+	top: 170px;
+	left: 650px;
+	width: 80px;
+	height: 80px;
+	background-repeat: no-repeat;
+	background-image: url(pipe.jpg);
+	background-size: 80px;
+	z-index: 1;
+}
+
+#pipe2_live {
+	position: absolute;
+	top: 190px;
+	left: 745px;
+	width: 100px;
+	height: 80px;
+	z-index: 1;
+}
+
+#pipe3 {
+	position: absolute;
+	top: 260px;
+	left: 650px;
+	width: 80px;
+	height: 80px;
+	background-repeat: no-repeat;
+	background-image: url(pipe.jpg);
+	background-size: 80px;
+	z-index: 1;
+}
+
+#pipe3_live {
+	position: absolute;
+	top: 375px;
+	left: 745px;
+	width: 100px;
+	height: 80px;
+	z-index: 1;
+}
+
+#pipe4 {
+	position: absolute;
+	top: 360px;
+	left: 650px;
+	width: 80px;
+	height: 80px;
+	background-repeat: no-repeat;
+	background-image: url(pipe.jpg);
+	background-size: 80px;
+	z-index: 1;
+}
+
+#pipe4_live {
+	position: absolute;
+	top: 560px;
+	left: 745px;
+	width: 100px;
+	height: 80px;
+	z-index: 1;
+}
+
+#pipe5_live {
+	position: absolute;
+	top: 375px;
+	left: 5px;
+	width: 100px;
+	height: 80px;
+	z-index: 1;
+}
+
+#pipe6_live {
+	position: absolute;
+	top: 560px;
+	left: 5px;
+	width: 100px;
+	height: 80px;
+	z-index: 1;
+}
+-->
+</style>
+<script type="text/javascript" src="jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+<!--
+function reloadFrames(){
+//	$('#pipe1_live').fadeOut(100).hide();
+//	$('#pipe1_frame').attr('src', "http://duramote.eng.uci.edu/ocsd/pipe1.html");
+//	document.getElementById('pipe1_frame').contentWindow.location.reload();
+//	$('#pipe1_live').fadeIn(100);
+
+//	$('#pipe2_live').fadeOut(100).hide();
+//	$('#pipe2_frame').attr('src', "http://duramote.eng.uci.edu/ocsd/pipe2.html");
+//	document.getElementById('pipe2_frame').contentWindow.location.reload();
+//	$('#pipe2_live').fadeIn(100);
+
+	$('#pipe3_live').fadeOut(100);
+	$('#pipe3_frame').attr('src', "http://duramote.eng.uci.edu/ocsd/pipe3.html");
+	document.getElementById('pipe3_frame').contentWindow.location.reload();
+	$('#pipe3_live').fadeIn(100);
+
+	$('#pipe4_live').fadeOut(100);
+	$('#pipe4_frame').attr('src', "http://duramote.eng.uci.edu/ocsd/pipe4.html");
+	document.getElementById('pipe4_frame').contentWindow.location.reload();
+	$('#pipe4_live').fadeIn(100);
+
+//	$('#pipe5_frame').attr('src', "http://duramote.eng.uci.edu/ocsd/pipe5.html");
+//	$('#pipe5_live').fadeIn(100);
+
+	$('#pipe6_live').fadeOut(100).hide();
+	$('#pipe6_frame').attr('src', "http://duramote.eng.uci.edu/ocsd/pipe6.html");
+	document.getElementById('pipe6_frame').contentWindow.location.reload();
+	$('#pipe6_live').fadeIn(100);
+
+	setTimeout("reloadFrames()", 5000);
+	return;
+}
+
+function hide(id){
+	var doc1 = document.getElementById('monitor1');
+	var doc2 = document.getElementById('monitor2');
+	doc1.style.visibility = "hidden";
+	doc2.style.visibility = "hidden";
+	return;
+}
+
+function show(id){
+	var titles = new Array('Pump Station', 'Vault');
+	var imgs = new Array();
+	imgs[0] = new Array('ocsd_1.png', 'ocsd_2.png');
+	imgs[1] = new Array('ocsd_2.png', 'ocsd_1.png');
+	var doc1 = document.getElementById('monitor1');
+	var doc2 = document.getElementById('monitor2');
+	var content1 = titles[id] + "<img src=" + imgs[id][0]+ " width=400px height=280px></img>";
+	var content2 = "<img src=" + imgs[id][1] + " width=400px height=280px></img>";
+	doc1.innerHTML = content1;
+	doc2.innerHTML = content2;
+	doc1.style.visibility = "visible";
+	doc2.style.visibility = "visible";
+	return;
+}
+function showLive(idx){
+	var objs = new Array('aframe', 'mframe');
+	var i;
+	t = document.getElementById('mframe');
+	t.setAttribute("src", "liveOCSD.html");
+	for (i = 0; i < 2; i++){
+		obj = document.getElementById(objs[i]);
+		obj.style.visibility = "visible";
+	}
+	return;
+}
+function hideLive(){
+	var objs = new Array('aframe', 'mframe');
+	var i;
+	for (i = 0; i < 2; i++){
+		obj = document.getElementById(objs[i]);
+		obj.style.visibility = "hidden";
+	}
+	return;
+}
+-->
+</script>
+</head>
+<body onload="reloadFrames()">
+<center>
+<div class="imageDiv">
+	<h2>OCSD Newport Pump Station</h2>
+	<img src="ocsd_loc.jpg">
+<!--
+	<div id="pipe1_live">
+		<iframe id="pipe1_frame" src="pipe1.html" width=270px height=180px marginwidth=0 marginheight=0 vspace=0 hspace=0>
+			iFrame is not supported
+		</iframe>
+	</div>
+	<div id="pipe2_live">
+		<iframe id="pipe2_frame" src="pipe2.html" width=270px height=180px marginwidth=0 marginheight=0 vspace=0 hspace=0>
+			iFrame is not supported
+		</iframe>
+	</div>
+-->
+
+	<div id="pipe3_live">
+		<iframe id="pipe3_frame" src="pipe3.html" width=270px height=180px marginwidth=0 marginheight=0 vspace=0 hspace=0>
+			iFrame is not supported
+		</iframe>
+	</div>
+	<div id="pipe4_live">
+		<iframe id="pipe4_frame" src="pipe4.html" width=270px height=180px marginwidth=0 marginheight=0 vspace=0 hspace=0>
+			iFrame is not supported
+		</iframe>
+	</div>
+<!--
+	<div id="pipe5_live">
+		<iframe id="pipe5_frame" src="pipe5.html" width=240px height=180px marginwidth=0 marginheight=0 vspace=0 hspace=0>
+			iFrame is not supported
+		</iframe>
+	</div>
+-->
+	<div id="pipe6_live">
+		<iframe id="pipe6_frame" src="pipe6.html" width=240px height=180px marginwidth=0 marginheight=0 vspace=0 hspace=0>
+			iFrame is not supported
+		</iframe>
+	</div>
+</div>
+</center>
+</body>
+</html>

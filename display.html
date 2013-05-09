@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<script type="text/javascript" src="jquery/jquery-1.4.2.min.js"></script>
+<title>PipeTect Project SCADA Center</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<style type="text/css">
+.liveFrame {
+	width: 1480px;;
+	height: 850px;
+	border-style: solid;
+	border-width: 0px;
+}
+</style>
+
+</head>
+<body>
+
+<div id='monitor'>
+	<center>
+	<div id='div0'> 
+	<iframe id='f0' src="campus.html" class="liveFrame">
+	</iframe>
+	</div>
+
+	<div id='div1' style="display:none;">
+	<center>
+	<iframe id='f1' src="" class="liveFrame">
+	</iframe>
+	</center>
+	</div>
+
+	<div id='div2' style="display:none;"> 
+	<iframe id='f2' src="" class="liveFrame">
+	</iframe>
+	</div>
+	</center>
+<div>
+
+<script>
+// Firefox works. IE no
+function resizeFrame(f) {
+	f.style.height = f.contentWindow.document.body.scrollHeight + 'px';
+}
+
+//jQuery script set a time interval to load page in each div and display the loaded page, script loaded on page load
+$(function() { 
+  var timer = setInterval( loadAndShow, 60000); //2000 is the interval in millisecond
+  var counter = 0;
+  
+  function loadAndShow() { 
+	//hide the div current being shown
+	$('#div'+counter.toString()).fadeOut('slow').hide();
+	counter++;
+	counter = counter%2;
+
+	//reload iframe
+	load2Frame();
+
+	//show the page on next div
+	$('#div'+counter.toString()).fadeIn('slow');
+
+  }
+
+    function load2Frame(){
+	if (counter == 0)
+	{
+		$('#f' + counter.toString()).attr("src", "campus.html");
+		$('#f' + counter.toString()).css("width", "1480px");
+	}	
+	else if (counter == 1)
+	{
+		$('#f' + counter.toString()).attr("src", "ocsd/ocsd.html");
+		$('#f' + counter.toString()).css("width", "1480px");
+	}	
+
+  }
+
+});
+</script>
+</body>
+</html>

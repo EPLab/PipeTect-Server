@@ -1,0 +1,76 @@
+<html>
+<head>
+<meta http-equiv="refresh" content="5">
+</noscript>
+<title>Duramote: Permanent UCI Campus Experiment</title>
+
+<script language="JavaScript">
+<!--
+
+var sURL = unescape("./UCI_Campus.html")
+
+function doLoad(){
+	setTimeout("refresh()", 5*1000);
+}
+
+function refresh(){
+	window.location.herf = sURL;
+}
+
+//-->
+</script>
+
+<script language="JavaScript1.1">
+<!--
+function refresh()[
+	window.location.replace(sURL);
+}
+//-->
+</script>
+
+<script language="JavaScript1.2">
+<!--
+function refresh()[
+	window.location.reload(false);
+}
+//-->
+</script>
+</head>
+
+<!--
+<body onload="doLoad()">
+//-->
+<body>
+
+<center>
+<h1>Duramote: Permanent UCI Campus Experiment</h1>
+<img alt="Experiment Layout" longdesc="Experiment Layout: Engineering Hall, Engineering Gateway, AIRB, CALIT2" src="http://duramote.eng.uci.edu/c.jpg" height="403" width="787" usemap="#CampusMap"/>
+<map name="CampusMap">
+	<area shape="circ" coords="135,60,20" href="ET.html" alt="Engineering Tower" target="_blank" />
+<!--
+	<area shape="circ" coords="58,210,20" href="EH4120.html" alt="Engineering Hall" target="_blank" />
+//-->
+	<area shape="circ" coords="103,318,20" href="Calit2.html" alt="Calit2 Building" target="_blank" />
+<!--
+	<area shape="circ" coords="290,270,20" href="EG.html" alt="Enginnering Gateway" target="_blank" />
+//-->
+	<area shape="circ" coords="635,328,20" href="AIRB.html" alt="AIRB Building" target="_blank" />
+</map>
+<!--
+<hr />
+<h2>Node 1: Engineering Hall</h2>
+<iframe frameborder=0 width=720 height=540 src="EH4120.html"></iframe>
+<br />
+<h2>Node 2: Engineering Gateway</h2>
+<img src="169.234.25.75_1.png" id="169.234.25.75_1.png">
+<br />
+<h2>Node 3: CALIT2 building</h2>
+<iframe frameborder=0 width=720 height=540 src="Calit2.html"></iframe>
+<br />
+<h2>Node 4: AIRB building</h2>
+<iframe frameborder=0 width=720 height=540 src="AIRB.html"></iframe>
+//-->
+</center>
+
+</body>
+</html>
